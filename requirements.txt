@@ -4,9 +4,13 @@ chardet==3.0.4
 dj-static==0.0.6
 Django==2.1.2
 idna==2.7
+pipenv==2018.10.13
 python-dateutil==1.5
 python-decouple==3.1
 pytz==2018.7
 requests==2.20.0
 static3==0.7.0
+travis==0.0.3
 urllib3==1.24.1
+virtualenv==16.1.0
+virtualenv-clone==0.4.0
