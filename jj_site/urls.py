@@ -13,11 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+
 from django.conf.urls import url
+from django.contrib import admin
+from django.views.static import serve
+
 from jj_site.core import views
+from jj_site.settings import PDF_ROOT
 
 urlpatterns = [
     url(r'^$/', views.home, name='index'),
-    url(r'^admin/', admin.site.urls)
+    url(r'^admin/', admin.site.urls),
+    url(r'^coc$', serve, {'path': 'coc_jj_site.pdf', 'document_root': PDF_ROOT})
+
 ]
